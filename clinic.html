@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="wep-font/css/all.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/clinic.css">
+  <title>Dr.yousef Clinic</title>
+</head>
+
+<body>
+  <header>
+    <a href="#main" class="logo">
+      <h3 class="h3">
+        den
+        <img src="images/dental-clinic_9939346.png" alt="">
+        tal
+      </h3>
+    </a>
+    <nav class="navigation">
+      <ul class="active">
+
+        <a href="#create" id="create" >
+          <i class="fa-solid fa-house"></i>create
+        </a>
+
+        <a href="#Data" id="Data">
+          <i class="fa-brands fa-servicestack"></i>data
+        </a>
+
+        <!-- <a href="#contact">
+          <i class="fa-solid fa-phone"></i>Contact
+        </a> -->
+      </ul>
+    </nav>
+    <div class="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <section class="clinic-management">
+
+    <div class="content">
+      <div class="inputs">
+        <div class="inp name">
+          <i class="fas fa-user"></i>
+          <label> name:</label>
+          <input type="text" id="names"
+          placeholder="name">
+        </div>
+
+        <div class="inp number">
+          <i class="fa-sharp fa-solid fa-phone fa-shake"></i>
+          <label>phone:</label>
+          <input type="text" id="phone"
+          placeholder="phone">
+        </div>
+
+        <div class="inp Age">
+          <i class="fa-solid fa-fire"></i>
+          <label>Age:</label>
+          <input type="text" id="Age" placeholder="age">  
+        </div>
+
+        <div class="inp date">
+          <i class="fa-regular fa-calendar-days"></i>
+          <label for="date">date:</label>
+          <input type="date" id="date">
+        </div>
+
+        <div class="inp prices">
+          <i class="fa-regular fa-dollar-sign fa-flip"></i>
+          <label>price:</label>
+
+          
+          <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+          
+          <input onkeyup="getTotal()" type="number" id="payment" placeholder="دفع">
+
+          <input type="number" id="checkup" placeholder= "كشف">
+
+        <small id="total"></small>
+        </div>
+
+        <div class="inp Note">
+          <i class="fa-regular fa-clipboard fa-fade"></i>
+          <label>Note:</label>
+          <input type="text" id="note" placeholder="note">
+        </div>
+
+        <div class="btn">
+          <button id="submit" class="inp">
+            create
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ///////// sec-data ///////// -->
+
+  <section class="data">
+    <div class="searchBox">
+      <div class="trt">
+        <i class="fas fa-search" id="button-search"></i>
+        <input onkeyup="searchData(this.value)" type="search" id="search" placeholder="search">
+      </div>
+      <div id="deleteAll"></div>
+    </div>
+
+    <div class="all">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>name</th>
+          <th>phone</th>
+          <th>age</th>
+          <th>date</th>
+          <th>price</th>
+          <th>payment</th>
+          <th>checkup</th>
+          <th>total</th>
+          <th>note</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tbody id="tbody">
+    
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <script src="Js/clinic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
